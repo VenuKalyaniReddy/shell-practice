@@ -14,7 +14,7 @@
 #!/bin/bash
 ID=$(id -u)  ## No spaces
 
-if [ $ID -ne 0 ] then ;
+if [ $ID -ne 0 ]; then 
     echo " ERROR::: Please run scipt with root user:::"
     exit 1
 else
@@ -23,7 +23,7 @@ fi
 
 yum install mysql -y
 
-if [ $? -ne 0 ] then ;
+if [ $? -ne 0 ]; then 
     echo "ERROR ::Installing MYSQL is Failed"
 else
     echo "MYSQL Installation is Successs"
