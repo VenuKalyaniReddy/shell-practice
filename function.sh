@@ -1,5 +1,5 @@
 #/bin/bash
-ID=$(ID-u)
+ID=$(ID -u)
 VALIDATE() {
     if [ $? -ne 0 ]
     then 
@@ -10,7 +10,7 @@ VALIDATE() {
     fi
 }
 
-if [$ID -ne 0]
+if [ $ID -ne 0 ]
 then 
     echo "ERROR:: Please run this script with root user"
     exit 1
