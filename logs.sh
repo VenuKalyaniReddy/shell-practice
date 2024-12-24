@@ -2,7 +2,7 @@
 ID=$(id -u)
 
 TIMESTAMP=$(date +%F-%H-%M-%S)
-LOGFILE= "/tmp/$0-$TIMESTAMP.log"
+LOGFILE= /tmp/$0-$TIMESTAMP.log"
 
 VALIDTE() {
     if [ $1 -ne 0 ]
@@ -14,7 +14,7 @@ VALIDTE() {
     fi
 }
 
-if [$ID -ne 0]
+if [ $ID -ne 0 ]
 then 
     echo "ERROR:: Please run this script with root acess"
     exit1
