@@ -3,8 +3,6 @@ ID=$(id -u)
 
 TIMESTAMP=$(date +%F-%H-%M-%S)
 LOGFILE="/tmp/$0-$TIMESTAMP.log"
-#LOGFILE="/tmp/$(basename $0)-$TIMESTAMP.log"
-
 
 VALIDTE() {
     if [ $1 -ne 0 ]
@@ -23,3 +21,9 @@ then
 else
     echo "ALL Good you are root user"  & >>$LOGFILE
 fi
+
+yum install mysql -y &>>$LOGFILE
+VALIDATE $? "Installing MYSQL"
+
+yum install git -y &>>$LOGFILE
+VALIDATE $? "Installing GIT"
