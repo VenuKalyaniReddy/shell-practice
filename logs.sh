@@ -8,7 +8,7 @@ VALIDTE() {
     if [ $1 -ne 0 ]
     then 
         echo "ERROR:: $2 ...FAILED"
-        exit1
+        exit 1
     else
         echo "ALL Good $2....SUCCESS"
     fi
@@ -17,7 +17,7 @@ VALIDTE() {
 if [ $ID -ne 0 ]
 then 
     echo "ERROR:: Please run this script with root acess"
-    exit1
+    exit 1
 else
     echo "ALL Good you are root user"
 fi
