@@ -4,7 +4,7 @@ ID=$(id -u)
 TIMESTAMP=$(date +%F-%H-%M-%S)
 LOGFILE="/tmp/$0-$TIMESTAMP.log"
 
-VALIDTE() {
+VALIDATE() {
     if [ $1 -ne 0 ]
     then 
         echo "ERROR:: $2 ...FAILED" & >>$LOGFILE
